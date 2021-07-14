@@ -1,0 +1,12 @@
+sort1 uses: bubble short
+
+How do you know?: As the file is already sorted, the bubble sort is faster
+
+
+sort2 uses: merge short
+
+How do you know?: it is the fastest of all
+
+sort3 uses: selection short
+
+How do you know?: it is the slowest of all
