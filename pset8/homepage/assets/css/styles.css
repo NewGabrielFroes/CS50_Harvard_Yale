@@ -8,8 +8,8 @@
 
 /*===== Colores =====*/
 :root{
-  --first-color: #4070F4;
-  --second-color: #0E2431;
+  --first-color: hsl(170, 89%, 60%);
+  --second-color: hsl(202, 56%, 12%);
 }
 
 /*===== Fuente y tipografia =====*/
