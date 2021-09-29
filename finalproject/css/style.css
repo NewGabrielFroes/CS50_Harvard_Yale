@@ -1,0 +1,246 @@
+body {
+    font-family: 'Urbanist', sans-serif;
+    background-color: #DCF2FF;
+}
+
+header {
+    padding: 20px 0;
+}
+
+h1, h2{
+    text-align: center;
+    font-size: 40px;
+    color: #ECBC3F;
+    font-weight: bolder; 
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+p strong {
+    font-weight: bold;
+    color: #ECBC3F;
+}
+
+section {
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 8%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.skip-to-content {
+    position: absolute;
+    top: 5px;
+    left: -999px;
+    border: 2px solid #A74C3C;
+    background-color: white;
+    color: #3F538E;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.skip-to-content:focus {
+    left: 5px;
+}
+
+.container {
+    display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.container img {
+    width: 30%;
+}
+
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3F528D;
+    font-size: 22px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+nav a:hover {
+    color: #A74C3C;
+}
+
+.historia {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../assets/centrohistorico.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.jeronimo {
+    width: 20%;
+    text-align: center;
+}
+
+.gastronomia {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../assets/gastronomia.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.cultura {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../assets/cultura.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.cultura p:nth-child(5) {
+   margin-bottom: 0;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.titulo-cadastro {
+    margin-bottom: 20px;
+}
+
+.titulo-cadastro ~ p {
+    color: black;
+}
+
+form {
+	display: inline-block;
+    width: 30%;
+}
+
+form label, form legend {
+	display:block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.input-padrao {
+    box-sizing: border-box;
+	display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.checkbox {
+	margin: 20px 0;
+}
+
+.enviar {
+	width:100%;
+	padding: 15px 0;
+	background: #3F538E;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	transition: 1s all;
+	cursor: pointer;
+}
+
+.enviar:hover {
+	background: #ECBC3F;
+	transform: scale(1.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #DCF2FF;
+}
+
+footer p {
+    color: #A74C3C;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+
+
+/* deixando site responsivo */
+
+@media (max-width:900px) {
+    .jeronimo {
+        width: 50%;
+        text-align: center;
+    }
+
+    form {
+        width: 50%;
+    }
+}
+
+@media (max-width:520px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container img {
+        width: 50%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gastronomia iframe {
+        width: 100%;
+    }
+
+    form {
+        width: 60%;
+    }
+
+    .bandeira {
+        width: 50%;
+    }
+}
+
+@media (max-width:280px) {
+    h1, h2{
+        text-align: center;
+        font-size: 25px;
+        color: #ECBC3F;
+        font-weight: bolder; 
+    }
+    
+    p {
+        text-align: center;
+        font-size: 1rem;
+        color: white;
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
+
+    .bandeira {
+        width: 50%;
+    }
+
+    form {
+        width: 80%;
+    }
+}

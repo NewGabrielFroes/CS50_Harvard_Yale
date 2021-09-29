@@ -1,0 +1,389 @@
+body {
+    font-family: 'Urbanist', sans-serif;
+    background-color: #DCF2FF;
+}
+
+header {
+    padding: 20px 0;
+}
+
+.skip-to-content {
+    position: absolute;
+    top: 5px;
+    left: -999px;
+    border: 2px solid #A74C3C;
+    background-color: white;
+    color: #3F538E;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.skip-to-content:focus {
+    left: 5px;
+}
+
+.container {
+    display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.container img {
+    width: 30%;
+}
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3F528D;
+    font-size: 22px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+
+nav a:hover {
+    color: #A74C3C;
+}
+
+/* estilo inspirado no vídeo https://www.youtube.com/watch?v=bW8X-tt5AZQ */
+
+.container-slide {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DCF2FF
+}
+
+.img-slider {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 10px;
+}
+
+.img-slider .slide {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.img-slider .slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
+
+}
+
+.img-slider .slide img {
+    z-index: 1;
+    width: 100%;
+    height: 480px;
+    border-radius: 5px;
+}
+
+.img-slider .slide .info {
+    position: absolute;
+    top: 0;
+    padding: 15px 30px;
+}
+
+.img-slider .slide .info h2{
+    color: #A74C3C;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+.img-slider .slide .info p {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 16px;
+    width: 60%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.img-slider .navigation {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.img-slider .navigation .btn {
+    background: rgba(255, 255, 255, 0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.img-slider .navigation .btn.active {
+    background: #A74C3C;
+}
+
+/*=================================*/
+
+.video-destinos {
+    text-align: center;
+}
+
+.video-destinos iframe {
+    border-radius: 5px;
+}
+
+.conteudo-outros-destinos {
+	width: 640px;
+	margin: 0 auto;
+}
+
+.outros-destinos {
+    padding: 3em 0;
+}
+
+
+.outros-destinos h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #ECBC3F;
+    font-weight: bolder; 
+}
+
+
+.lista-outros-destinos {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.lista-outros-destinos li {
+	line-height: 1.5;
+}
+
+.lista-outros-destinos li {
+	font-weight: bold;
+}
+
+
+.lista-outros-destinos li:before {
+	content: "🟊";
+}
+
+.turismo {
+	width: 50%;
+	opacity: 1;
+	transition: 400ms;
+	box-shadow: 10px 10px 10px 0 #000000;
+}
+
+.imagem-beneficios:hover {
+	opacity: 0.3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #DCF2FF;
+}
+
+footer p {
+    color: #A74C3C;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+/*  estilo inspirado no vídeo https://www.youtube.com/watch?v=bW8X-tt5AZQ */
+@media (max-width: 750px) {
+    .container-slide {
+        height: initial;
+    }
+    
+    
+    .img-slider {
+        width: 400px;
+        height: 250px;
+        
+    }
+    .img-slider .slide img {
+        max-height: 250px;
+    }
+    .img-slider .slide .info {
+        padding: 10px 25px;
+    }
+    .img-slider .slide .info h2 {
+        font-size: 30px;
+    }
+    .img-slider .slide .info p {
+        width: 80%;
+        font-size: 13px;
+    }
+    .img-slider .navigation {
+        bottom: 15px;
+    }
+    .video-destinos iframe {
+        width: 400px;
+        height: 250px;
+    }
+    
+    .conteudo-outros-destinos {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width:500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container img {
+        width: 50%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:480px) {
+  
+    .container-slide {
+        height: initial;
+        width: 100%;
+    }
+
+    .video-destinos iframe {
+       width: 95%;
+    }
+
+    .img-slider {
+        width: 100%;
+        height: 200px;
+        
+    }
+
+    .img-slider .slide img {
+        max-height: 200px;
+    }
+
+    .img-slider .slide .info {
+        padding: 5px 10px;
+    }
+
+    .img-slider .slide .info h2 {
+        font-size: 25px;
+    }
+
+    .img-slider .slide .info p {
+        width: 90%;
+        font-size: 11px;
+    }
+
+    .img-slider .navigation {
+        bottom: 15px;
+    }
+
+    .img-slider .navigation .btn {
+        width: 8px;
+        height: 8px;
+        margin: 6px;
+    }
+
+    .bandeira {
+        width: 50%;
+    }
+
+    .conteudo-outros-destinos {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .container-slide {
+        height: initial;
+        width: 100%;
+    }
+
+    .video-destinos iframe {
+       width: 95%;
+    }
+
+    .img-slider {
+        width: 100%;
+        height: 200px;
+        
+    }
+
+    .img-slider .slide img {
+        height: 200px;
+    }
+
+    .img-slider .slide .info {
+        padding: 5px 10px;
+    }
+
+    .img-slider .slide .info h2 {
+        font-size: 25px;
+    }
+
+    .img-slider .slide .info p {
+        width: 90%;
+        font-size: 13px;
+    }
+
+    .img-slider .navigation {
+        bottom: 15px;
+    }
+
+    .img-slider .navigation .btn {
+        width: 8px;
+        height: 8px;
+        margin: 6px;
+    }
+
+    .bandeira {
+        width: 50%;
+    }
+
+    .conteudo-outros-destinos {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
